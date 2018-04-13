@@ -1,26 +1,26 @@
 package com.light.springboot;
 
-import java.util.EnumSet;
-
-import javax.servlet.DispatcherType;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletContextInitializer;
-
-import com.light.springboot.filter.TimerFilter;
-import com.light.springboot.listener.ListenerTest;
-import com.light.springboot.servlet.ServletTest;
+import org.springframework.cache.annotation.EnableCaching;
 
 /**
  * @author leihuating
  * @time 2018年4月4日 上午8:42:05
  */
+//开启缓存
+@EnableCaching
 @SpringBootApplication
 public class SpringbootApplication implements ServletContextInitializer {
 
+	public static void main(String[] args) {
+		SpringApplication.run(SpringbootApplication.class, args);
+	}
+	
 	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		/*
@@ -37,7 +37,4 @@ public class SpringbootApplication implements ServletContextInitializer {
 		// servletContext.addListener(new ListenerTest());
 	}
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringbootApplication.class, args);
-	}
 }

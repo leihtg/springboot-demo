@@ -3,11 +3,13 @@
  */
 package com.light.springboot.model;
 
+import java.io.Serializable;
+
 /**
  * @author leihuating
  * @time 2018年4月13日 上午8:41:19
  */
-public class Department {
+public class Department implements Serializable{
 	private Integer id;
 
 	private String name;
