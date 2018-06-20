@@ -2,7 +2,7 @@
 <configuration>
 	<!-- 文件输出格式 -->
 	<property name="PATTERN"
-		value="%-12(%d{yyyy-MM-dd HH:mm:ss.SSS}) |-%-5level [%thread] %c [%L] -| %msg%n" />
+		value="%-12(%d{yyyy-MM-dd HH:mm:ss.SSS}) |-%-5level [%thread] %c [%caller{1}] -| %msg%n" />
 	<!-- test文件路径 -->
 	<property name="TEST_FILE_PATH" value="d:/test.log" />
 	<!-- pro文件路径 -->
